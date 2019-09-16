@@ -16,16 +16,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        check_button = findViewById(R.id.checkIn);
+        /**check_button = findViewById(R.id.checkIn);*/
         sign_button = findViewById(R.id.signUp123);
 
-        check_button.setOnClickListener(new View.OnClickListener(){
+        /**check_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 openActivity3();
             }
 
-        });
+        });*/
         sign_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, newSignUp.class);
         startActivity(intent);
     }
-    public void openActivity3() {
+    /**public void openActivity3() {
         Intent intent = new Intent(this, checkIn.class);
         startActivity(intent);
-    }
+    }*/
 }

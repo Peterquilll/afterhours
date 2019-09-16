@@ -12,13 +12,34 @@ import android.widget.Button;
 public class checkIn extends AppCompatActivity {
     String newview;
     String SQLiteQuery;
-    Button layout;
+    private Button layout, home;
     SQLiteDatabase SQLITEDATABASE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_in);
+
+        home = findViewById(R.id.button2);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backHome();
+
+            }
+
+
+        });
+    }
+
+    public void backHome() {
+        Intent intent = new Intent(this, newSignUp.class);
+        startActivity(intent);
+    }
+}
+
+
+
         /**
         layout = findViewById(R.id.button);
         layout.setOnClickListener(new View.OnClickListener(){
@@ -34,8 +55,6 @@ public class checkIn extends AppCompatActivity {
         SQLITEDATABASE.execSQL(SQLiteQuery);
     }**/
 
-    }
-}
 
 
 
